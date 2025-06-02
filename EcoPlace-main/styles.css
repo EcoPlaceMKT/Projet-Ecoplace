@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.nav-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  z-index: 100;
+  transition: background-color 0.3s;
+}
+body.dark .nav-buttons {
+  background: #1f1f1f;
+  border-top-color: #333;
+}
+.nav-buttons button {
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: #555;
+}
+.nav-buttons button.active {
+  color: #27ae60;
+}
+body.dark .nav-buttons button.active {
+  color: #7bdb8a;
+}
+.screen {
+  flex: 1;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 4.5rem; /* space for nav */
+  overflow-y: auto;
+}
+.screen.active {
+  display: flex;
+}
+header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.post {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  max-width: 500px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+body.dark .post {
+  background: #1e1e1e;
+  color: #eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+.post img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+.muted {
+  color: #666;
+  font-size: 0.9rem;
+}
+.result {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background: #219150;
+}
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 600px;
+  transition: background-color 0.3s, color 0.3s;
+}
+body.dark .card {
+  background: #1e1e1e;
+  color: #eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+.eco-interest-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  max-width: 600px;
+  width: 100%;
+  color: #444;
+}
+body.dark .eco-interest-list {
+  color: #ccc;
+}
+#energy-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+  margin-top: 1rem;
+  max-width: 600px;
+  width: 100%;
+}
+#energy-list li {
+  margin-bottom: 0.5rem;
+}

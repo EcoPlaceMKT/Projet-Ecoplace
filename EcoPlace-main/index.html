@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'application écolo - EcoPlace</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<img src="images/ecoplace-removebg-preview.png" alt="EcoplaceLogo"
+style="position: fixed; top: -60px; left: 10px; width: 200px; height: auto; z-index: 1000;">
+<body>
+  <main id="app">
+    <div class="nav-buttons">
+      <button data-nav="0">⚙️</button>
+      <button data-nav="1">🗺️</button>
+      <button data-nav="2" class="active">⬇</button>
+      <button data-nav="3">⚡</button>
+      <button data-nav="4">🎁</button>
+    </div>
+    <section class="screen settings" data-index="4">
+      <header>⚙️ Réglages</header>
+      <div class="card">
+        <label>
+          <input type="checkbox" id="darkModeToggle" />
+          Mode sombre
+        </label>
+      </div>
+      <div class="card">
+        <label for="languageSelect">Langue :</label>
+        <select id="languageSelect">
+          <option value="fr" selected>Français</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <p class="muted">Réglages fictifs mais fonctionnels !</p>
+    </section>
+
+    <section class="screen map" data-index="0">
+      <header>🗺️ EcoMap</header>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carte interactive Reims - Lieux d'intêret EcoInterest</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h3 {
+      margin-bottom: 15px;
+    }
+    .btn-container {
+      margin-bottom: 15px;
+      white-space: nowrap;
+    }
+    .btn-container a {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 8px 15px;
+      font-size: 14px;
+      text-decoration: none;
+      color: #27ae60;
+      border: 1px solid #27ae60;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .btn-container a:hover {
+      background-color: #27ae60;
+      color: white;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      display: block;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<h3>Carte interactive - Lieux clés de Reims EcoInterest</h3>
+
+<div class="btn-container">
+  <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.802215446071!2d4.030668315674412!3d49.26015627932978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47eeb34ec3cc85d9%3A0x90d1d55963e7b4c6!2sPlace%20du%20Forum%2C%20Reims!5e0!3m2!1sfr!2sfr!4v1685223456789!5m2!1sfr!2sfr" target="mapframe">Place du Forum</a>
+  <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2583.250630184351!2d4.028578915764523!3d49.258329479331695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47eeb34db63e8a11%3A0x40c14484fb8de40!2sReims%2C%20France!5e0!3m2!1sfr!2sfr!4v1685199328495!5m2!1sfr!2sfr" target="mapframe">Centre-ville</a>
+  <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2583.455764552622!2d4.033711515767413!3d49.25586657933077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47eeb35898c8e4db%3A0x38f83f64d1eb2527!2sCath%C3%A9drale%20Notre-Dame%20de%20Reims!5e0!3m2!1sfr!2sfr!4v1685225678901!5m2!1sfr!2sfr" target="mapframe">Cathédrale</a>
+  <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2583.743981302035!2d4.040823115770513!3d49.2537764793314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47eeb3419f390a27%3A0x498d97597c477dec!2sPalais%20du%20Tau!5e0!3m2!1sfr!2sfr!4v1685226789012!5m2!1sfr!2sfr" target="mapframe">Palais du Tau</a>
+</div>
+
+<iframe
+  name="mapframe"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.802215446071!2d4.030668315674412!3d49.26015627932978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47eeb34ec3cc85d9%3A0x90d1d55963e7b4c6!2sPlace%20du%20Forum%2C%20Reims!5e0!3m2!1sfr!2sfr!4v1685223456789!5m2!1sfr!2sfr"
+  width="800"
+  height="450"
+  style="border:none;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+></iframe>
+
+
+</body>
+</html>
+
+      </ul>
+    </section>
+
+    <section class="screen feed active" data-index="1">
+      <header>⬇ EcoFeed</header>
+      <article class="post">
+
+<video controls playsinline style="width:100%; max-height: 120vh; object-fit: cover; border-radius: 12px;">
+  <source src="video/copy_E8B2A295-D999-4512-AF81-A4C3C364D795.MOV" type="video/mp4">
+</video>        
+<p class="muted">par @Marine</p>
+      </article>
+      <article class="post">
+<img src="images/ecoplace ambassadeur.png" style="width:100%; max-height: 120vh; object-fit: cover; border-radius: 12px;">
+</video>
+        <p class="muted">Post sponsorisé par LeGrandJD</p>
+      </article>
+      <article class="post">
+
+<video controls playsinline style="width:100%; max-height: 120vh; object-fit: cover; border-radius: 12px;">
+  <source src="video/copy_25A97200-4F26-4F98-B282-03799C5C2483.MOV" type="video/mp4">
+</video>
+        <p class="muted"> par @Théodu51</p>      
+      </article>
+
+            <article class="post">
+
+<video controls playsinline style="width:100%; max-height: 120vh; object-fit: cover; border-radius: 12px;">
+  <source src="video/5133BA06-27B2-4763-8B83-A03E48B01606.MOV" type="video/mp4">
+</video>
+        <p class="muted"> par @ShanaDu</p>      
+      </article>
+    </section>
+
+    <section class="screen energy" data-index="2">
+      <header>⚡ Énergie</header>
+      <img src="https://www.triskeline.fr/wp-content/uploads/2023/01/Untitled-design-30-1024x683.jpg" alt="Four électrique" style="width:30%; border-radius: 12px; margin-bottom: 1rem;" />
+      <p class="muted">Consommation actuelle</p>
+      <div class="result" id="kwh">— kWh</div>
+      <button class="btn" id="compareBtn">Comparer</button>
+      <p class="muted" id="savings"></p>
+      <ul id="energy-list"></ul>
+    </section>
+
+    <section class="screen rewards" data-index="3">
+      <header>🎁 Récompenses</header>    
+      
+      <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offres Éco Cashback</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .offer-grid {
+      display: flex;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .offer-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      transition: transform 0.2s ease;
+    }
+    .offer-card:hover {
+      transform: translateY(-4px);
+    }
+    .offer-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    .offer-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .offer-desc {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .cashback {
+      font-size: 1rem;
+      color: #2e7d32;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .pay-button {
+      padding: 0.5rem 1rem;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+         <p>Graines dispos : <strong id="seeds">100</strong></p>
+               <p id="redeemMsg" style="margin-top:1rem;color:#27ae60;font-weight:bold;"></p>
+  <div class="container">
+    <div class="offer-grid">
+
+      <div class="offer-card">
+        <img src="https://picsum.photos/seed/nature/280/150" alt="Nature Shop">
+        <div class="offer-title">Nature Shop</div>
+        <div class="offer-desc">Produits naturels & bio</div>
+        <div class="cashback">Jusqu'à 10% de cashback</div>
+        <button class="btn" id="redeem10">Payer avec mes graines (50)</button>
+      </div>
+
+      <div class="offer-card">
+        <img src="https://picsum.photos/seed/greenenergy/280/150" alt="Green Energy">
+        <div class="offer-title">Green Energy</div>
+        <div class="offer-desc">Souscription énergie verte</div>
+        <div class="cashback">50€ offerts</div>
+        <button class="btn" id="redeem20">Payer avec mes graines (100)</button>
+      </div>
+
+      <div class="offer-card">
+        <img src="https://picsum.photos/seed/velocity/280/150" alt="Velo City">
+        <div class="offer-title">Velo City</div>
+        <div class="offer-desc">Abonnements mobilité douce</div>
+        <div class="cashback">20% remboursés</div>
+        <button class="btn" id="redeem50">Payer avec mes graines (250)</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Offres Éco - EcoPlace 🌍
+  </footer>
+</body>
+</html>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
